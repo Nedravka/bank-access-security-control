@@ -6,7 +6,7 @@
 
 Пульт охраны — это сайт, который можно подключить к удалённой базе данных с
 визитками и карточками пропуска сотрудников нашего банка.
-##Как установить
+## Как установить
 Достаточно скопировать репозиторий командой:
 
     git clone https://github.com/Nedravka/bank-access-security-control.git
@@ -24,10 +24,10 @@ Python3 должен быть уже установлен. Затем испол
 
     http://127.0.0.1:8000/
 
-##Цель проекта
+## Цель проекта
 
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков dvmn.org.
-##Links
+## Links
     Documentation: https://docs.djangoproject.com/en/1.11/
     Git: https://git-scm.com/docs/git
     Source Code: https://github.com/Nedravka/bank-access-security-control
