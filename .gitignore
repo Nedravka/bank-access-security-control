@@ -11,6 +11,9 @@ __pypackages__/
 __pycache__/
 .upm
 .breakpoints
+poetry.lock
+pyproject.toml
+.replit
 
 #Django stuff
 *.log

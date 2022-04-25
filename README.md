@@ -26,9 +26,11 @@ Python3 должен быть уже установлен. Затем испол
 
 ## Цель проекта
 
-Код написан в образовательных целях на онлайн-курсе для веб-разработчиков dvmn.org.
+Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](http://dvmn.org).
 ## Links
-    Documentation: https://docs.djangoproject.com/en/1.11/
-    Git: https://git-scm.com/docs/git
-    Source Code: https://github.com/Nedravka/bank-access-security-control
+Documentation: [https://docs.djangoproject.com/en/1.11/](https://docs.djangoproject.com/en/1.11/)
+    
+Git: [https://git-scm.com/docs/git](https://git-scm.com/docs/git)
+    
+Source Code: [https://github.com/Nedravka/bank-access-security-control](https://github.com/Nedravka/bank-access-security-control)
     
