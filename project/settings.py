@@ -3,8 +3,11 @@ import os
 import dj_database_url
 from distutils.util import strtobool
 from dotenv import load_dotenv
+from environs import Env
 
 load_dotenv()
+env = Env()
+env.read_env()
 
 DEFAULT_DATABASE_URL = f'postgres://{os.getenv("USER")}:' \
                       f''f'{os.getenv("PASSWORD")}@{os.getenv("HOST")}:' \
@@ -18,12 +21,12 @@ INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = bool(strtobool(os.getenv('DEBUG')))
+DEBUG = bool(strtobool(os.getenv('DEBUG', default=False)))
 
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
