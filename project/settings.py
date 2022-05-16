@@ -1,20 +1,17 @@
 import os
 
+import dj_database_url
 from distutils.util import strtobool
 from dotenv import load_dotenv
 
 load_dotenv()
 
+DEFAULT_DATABASE_URL = f'postgres://{os.getenv("USER")}:' \
+                      f''f'{os.getenv("PASSWORD")}@{os.getenv("HOST")}:' \
+                      f''f'{os.getenv("PORT")}/{os.getenv("NAME")}'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-    }
+    'default': dj_database_url.config(default=DEFAULT_DATABASE_URL)
 }
 
 INSTALLED_APPS = ['datacenter']
@@ -26,7 +23,7 @@ DEBUG = bool(strtobool(os.getenv('DEBUG')))
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
